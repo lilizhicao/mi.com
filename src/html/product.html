@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index_xiaomi.css">
+    <script src="../js/product.js" type="module"></script>
+</head>
+<style>
+    .header {
+        border-bottom: 1px solid #eee;
+    }
+
+    .product {
+        width: 1200px;
+        margin: 0 auto;
+        min-height: 800px;
+        background: #FFF;
+    }
+
+    .product-left {
+        width: 560px;
+        height: 560px;
+        float: left;
+    }
+
+    .product-left img {
+        width: 560px;
+        height: 560px;
+    }
+
+    .product-right {
+        float: right;
+        width: 600px;
+        margin-left: 30px;
+        padding-top: 20px;
+    }
+
+    .product-right h1 {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 24px;
+        font-weight: 400;
+        color: #212121;
+    }
+
+    .unit-price {
+        display: block;
+        font-size: 18px;
+        line-height: 1;
+        color: #ff6700;
+        padding: 12px 0 10px;
+    }
+
+    .detail {
+        color: #b0b0b0;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        padding-top: 8px;
+        line-height: 1.5;
+    }
+
+    .kucun {
+        color: #b0b0b0;
+        margin: 0;
+        padding: 0;
+        padding-top: 8px;
+        line-height: 1.5;
+    }
+
+    #addItem {
+        display: block;
+        width: 298px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 16px;
+        background: #ff6700;
+        border: none;
+        color: #fff;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <header>
+        <div>
+            <div class="header">
+                <div class="site-topbar">
+                    <div class="container">
+                        <!-- 头部导航条 -->
+                        <div class="topbar-nav"><a rel="nofollow" href="#" stat_exposure="true">小米商城</a> <span
+                                class="sep">|</span> <a rel="nofollow" href="#" target="_blank"
+                                stat_exposure="true">MIUI</a> <span class="sep">|</span> <a rel="nofollow" href="#"
+                                target="_blank" stat_exposure="true">IoT</a> <span class="sep">|</span> <a
+                                rel="nofollow" href="#" target="_blank" stat_exposure="true">云服务</a> <span
+                                class="sep">|</span> <a rel="nofollow" href="#" target="_blank"
+                                stat_exposure="true">天星数科</a> <span class="sep">|</span> <a rel="nofollow" href="#"
+                                target="_blank" stat_exposure="true">有品</a> <span class="sep">|</span> <a rel="nofollow"
+                                href="#" target="_blank" stat_exposure="true">小爱开放平台</a> <span class="sep">|</span> <a
+                                rel="nofollow" href="#" target="_blank" stat_exposure="true">企业团购</a> <span
+                                class="sep">|</span> <a rel="nofollow" href="#" target="_blank"
+                                stat_exposure="true">资质证照</a>
+                            <span class="sep">|</span> <a rel="nofollow" href="#" target="_blank"
+                                stat_exposure="true">协议规则</a> <span class="sep">|</span> <a rel="nofollow" href="#"
+                                target="_blank" id="J_siteDownloadApp" class="topbar-download" stat_exposure="true">
+                                下载app
+                                <span class="appcode"><img src="#" alt="小米商城" width="90" height="90">
+                                    小米商城APP
+                                </span></a> <span class="sep">|</span> <a rel="nofollow" href="#" target="_blank"
+                                stat_exposure="true">智能生活</a> <span class="sep">|</span> <a rel="nofollow"
+                                href="javascript:;" class="J_siteGlobalRegion" stat_exposure="true">Select Location</a>
+                        </div>
+                        <!-- 跳转页2-------------购物车 -->
+                        <div id="J_miniCartTrigger" class="topbar-cart"><a rel="nofollow" id="J_miniCartBtn"
+                                href="../html/cart.html" class="cart-mini" stat_exposure="true"><em
+                                    class="iconfont-cart"></em><em class="iconfont-cart-full hide"></em>购物车<span
+                                    class="cart-mini-num J_cartNum">（0）</span></a>
+                            <div id="J_miniCartMenu" class="cart-menu ">
+                                <div class="menu-content">
+                                    <div class="loading">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <ul id="J_miniCartList" class="cart-list hide"></ul>
+                                    <div id="J_miniCartListTotal" class="cart-total clearfix hide"></div>
+                                    <div class="msg msg-error hide"></div>
+                                    <div class="msg msg-empty hide">购物车中还没有商品，赶紧选购吧！</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 跳转页1-------------登录/注册 -->
+                        <div id="J_siteUserInfo" class="topbar-info"><a rel="nofollow" href="./login.html"
+                                data-agreement="true" data-login="true" class="link" data-href="./login.html"
+                                stat_exposure="true">登录</a> <span class="sep">|</span> <a rel="nofollow"
+                                href="./reg.html" data-agreement="true" data-register="true" class="link"
+                                data-href="//account.xiaomi.com/pass/register" stat_exposure="true">注册</a><span
+                                class="sep">|</span><span class="message"><a rel="nofollow" href="javascript:void(0);"
+                                    data-href="//www.mi.com/user/message" class="J_needAgreement" data-login="true"
+                                    data-agreement="true" stat_exposure="true">消息通知<i
+                                        class="J_miMessageTotal"></i></a></span></div>
+                    </div>
+                    <div id="J_globalSiteLinks" style="display: none;">
+                    </div>
+                </div>
+                <div class="site-header  ">
+                    <div class="container">
+                        <div class="header-logo"><a href="#" title="小米官网" class="logo ir" stat_exposure="true">小米官网</a>
+                        </div>
+                        <div class="header-nav ">
+                            <ul class="nav-list J_navMainList clearfix">
+                                <li data-index="0" class="nav-item"><a href="#" class="link" data-settrack="true"
+                                        stat_exposure="true"><span class="text">小米手机</span></a>
+                                    <div class="item-children">
+                                        <div class="container">
+                                            <ul class="children-list clearfix">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-index="1" class="nav-item"><a href="#" class="link" data-settrack="true"
+                                        stat_exposure="true"><span class="text">Redmi
+                                            红米</span></a>
+                                    <div class="item-children">
+                                        <div class="container">
+                                            <ul class="children-list clearfix">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-index="2" class="nav-item"><a href="#" class="link" data-settrack="true"
+                                        stat_exposure="true"><span class="text">电视</span></a>
+                                    <div class="item-children">
+                                        <div class="container">
+                                            <ul class="children-list clearfix">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-index="3" class="nav-item"><a href="#" class="link" data-settrack="true"
+                                        stat_exposure="true"><span class="text">笔记本</span></a>
+                                    <div class="item-children">
+                                        <div class="container">
+                                            <ul class="children-list clearfix">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-index="4" class="nav-item"><a href="#" class="link" data-settrack="true"
+                                        stat_exposure="true"><span class="text">家电</span></a>
+                                    <div class="item-children">
+                                        <div class="container">
+                                            <ul class="children-list clearfix">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-index="5" class="nav-item"><a href="#" class="link" data-settrack="true"
+                                        stat_exposure="true"><span class="text">路由器</span></a>
+                                    <div class="item-children">
+                                        <div class="container">
+                                            <ul class="children-list clearfix">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-index="6" class="nav-item"><a href="#" class="link" data-settrack="true"
+                                        stat_exposure="true"><span class="text">智能硬件</span></a>
+                                    <div class="item-children">
+                                        <div class="container">
+                                            <ul class="children-list clearfix">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-index="7" class="nav-item"><a href="#" target="_blank" class="link"
+                                        data-settrack="true" stat_exposure="true"><span class="text">服务</span></a></li>
+                                <li data-index="8" class="nav-item"><a href="#" target="_blank" class="link"
+                                        data-settrack="true" stat_exposure="true"><span class="text">社区</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- 头部搜索框 -->
+                        <div class="header-search ">
+                            <form id="J_searchForm" action="#" method="get" class="search-form clearfix">
+                                <label for="search" class="hide">站内搜索</label>
+                                <a class="no-style-msq" data-settrack="true" stat_exposure="true">
+                                    <input type="search" id="search" name="keyword" autocomplete="off"
+                                        class="search-text" placeholder="小米10"></a>
+                                <a id="J_submitBtn" class="no-style-msq" data-settrack="true"
+                                    stat_exposure="true"><input type="submit" value="" class="search-btn iconfont"></a>
+                                <div class="search-hot-words"></div>
+                                <div id="J_keywordList" class="keyword-list hide">
+                                    <ul class="result-list"></ul>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="J_doodleWrapper"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="product"></div>
+
+</body>
+
+</html>
